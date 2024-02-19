@@ -9,7 +9,6 @@ async function main() {
   await safeMath.waitForDeployment();
 
 
- 
   const ephKeys = await hre.ethers.deployContract("EphemeralKeys");
   await ephKeys.waitForDeployment();
 
