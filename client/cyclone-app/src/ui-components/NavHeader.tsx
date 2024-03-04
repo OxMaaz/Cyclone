@@ -1,4 +1,4 @@
-import logo from "../Logos/logo.jpg";
+import logo from "../Logos/Logo.png";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "./Container";
@@ -58,7 +58,7 @@ const NavBar = (props: Props) => {
           <div className="flex items-center logo-div">
             <img src={logo} alt="" className="logo w-[56px] h-[51px]" />
             <h1 className="-ml-1 montserrat-subtitle sm:text-[1.5rem] font-bold text-[1.4rem] text-white">
-              Forus
+              Cyclone
             </h1>
           </div>
           {/* Navigation Buttons */}
@@ -101,12 +101,12 @@ const NavBar = (props: Props) => {
                 </a>
               </p>
               <p className="  text-gray-300  ">
-                <a href="https://github.com/TheForus">
+                <a href="https://github.com/TheCyclone">
                   <FaGithub size={22} />
                 </a>
               </p>
               <p className="  text-gray-300  ">
-                <a href="https://twitter.com/The_Forus">
+                <a href="https://twitter.com/The_Cyclone">
                   <FaTwitter size={22} />
                 </a>
               </p>
@@ -116,7 +116,7 @@ const NavBar = (props: Props) => {
               <div
                 className="sm:static absolute left-3 bottom-2 montserrat-subtitle border-1 
               sm:text-[1rem] text-[0.9rem] px-2 sm:px-4
-             rounded-full text-[#e9edf1] font-extrabold border border-gray-500 hover:border-highlight"
+             rounded-full text-[#e9edf1] font-extrabold border border-gray-500 hover:border-[#FFDE59]"
               >
                 <ul
                   className=""
@@ -181,7 +181,7 @@ const NavBar = (props: Props) => {
             >
               <p
                 // onClick={copyAddress}
-                className={`sm:text-[1rem] md:text-[0.9rem] montserrat-small text-cyan-500  font-semibold text-[0.8rem]`}
+                className={`sm:text-[1rem] md:text-[0.9rem] montserrat-small text-[#FFDE59]  font-semibold text-[0.8rem]`}
               >
                 {sessionStorage.getItem("address") !== null || false
                   ? connect.userBalance
@@ -217,8 +217,8 @@ const NavBar = (props: Props) => {
             <button
               onClick={connect.connectWallet}
               className="flex space-x-1 justify-center w-[100%] mx-auto mb-4 my-2 py-1 montserrat-subtitle border-1  montserrat-subtitle  
-          hover:shadow-xl px-3 text-center text-black highlight border border-black 
-          rounded-md font-bold hover:border-highlight hover:text-highlight  transition-all ease-linear"
+          hover:shadow-xl px-3 text-center text-black  border border-black 
+          rounded-md font-bold hover:border-[#FFDE59] hover:text-[#FFDE59]  transition-all ease-linear"
             > connect wallet</button>
           ) : (
             ""

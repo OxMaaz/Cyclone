@@ -38,7 +38,7 @@ const Transfer = () => {
   let sharedSecret: string | '';
 
   const [token, settoken] = useState<string | "">("");
-  const [forusKey, setforusKey] = useState<string | "">("");
+  const [CycloneKey, setCycloneKey] = useState<string | "">("");
   const [error, seterror] = useState<string | "">("");
   const [amount, setamount] = useState<string | "">("");
   const [show, setshow] = useState<boolean>(false);
@@ -103,7 +103,7 @@ const Transfer = () => {
 
     if (key) {
       
-      setforusKey(key);    
+      setCycloneKey(key);    
     }
 
   }, [location.search, currentNetwork, byDefault]);
@@ -112,10 +112,10 @@ const Transfer = () => {
 
 
 
-  //helpers function to validate forus key
+  //helpers function to validate Cyclone key
 
 
-  const validatingForuskey = (event: any) => {
+  const validatingCyclonekey = (event: any) => {
 
 
       const key = event.target.value;
@@ -131,7 +131,7 @@ const Transfer = () => {
       }
   
   
-      setforusKey(key);
+      setCycloneKey(key);
   
     
 
@@ -141,7 +141,7 @@ const Transfer = () => {
   const validateInputs = () => {
 
 
-    if (forusKey === "" || amount === "") {
+    if (CycloneKey === "" || amount === "") {
       seterror("Please fill the inputs");
       setTimeout(() => {
         seterror("");
@@ -154,7 +154,7 @@ const Transfer = () => {
 
 
 
-  //receipent public key (i.e forus key )
+  //receipent public key (i.e Cyclone key )
   let rec_fkey: EC.KeyPair | any;
 
 
@@ -170,10 +170,10 @@ const Transfer = () => {
 
 
 
-  const validateForusKey = async () => {
+  const validateCycloneKey = async () => {
 
     /*
-       removing the prefix "fk" of the forus key 
+       removing the prefix "fk" of the Cyclone key 
   */
 
 
@@ -182,15 +182,15 @@ const Transfer = () => {
     
 
 
-      if (forusKey.slice(0, 2).toLowerCase() === "fk") {
-        const _forusKey = forusKey.slice(2);
+      if (CycloneKey.slice(0, 2).toLowerCase() === "fk") {
+        const _CycloneKey = CycloneKey.slice(2);
 
         /*
-         removing the one bytes suffix from the forus key then decoding it to generate an stealth address
+         removing the one bytes suffix from the Cyclone key then decoding it to generate an stealth address
     */
-        let decode_forusKey = base58.decode(_forusKey);
+        let decode_CycloneKey = base58.decode(_CycloneKey);
 
-        const decodedkey = decode_forusKey.subarray(0, 33);
+        const decodedkey = decode_CycloneKey.subarray(0, 33);
         rec_fkey = ec.keyFromPublic(decodedkey, "hex");
 
       } else {
@@ -210,7 +210,7 @@ const Transfer = () => {
   const setUpStealthAddress = async () => {
 
 
-    validateForusKey()
+    validateCycloneKey()
     /*
          Generating the stealth address by doing some elliptic curve calculation here
       */
@@ -471,9 +471,9 @@ const Transfer = () => {
           montserrat-subtitle outline-none px-3 py-3 h-[100%] rounded-md
            hover:border-cyan-900 w-[100%] bg-black/10 border-2 border-gray-600"
           type="text"
-          onChange={validatingForuskey}
-          placeholder="Enter Your Forus Key"
-          value={forusKey}
+          onChange={validatingCyclonekey}
+          placeholder="Enter Your Cyclone Key"
+          value={CycloneKey}
         />
       </div>
       {/* Amount */}
@@ -485,8 +485,7 @@ const Transfer = () => {
         >
           <input
             className="text-[0.9rem] font-semibold text-gray-300  placeholder:text-gray-500
-          montserrat-subtitle outline-none py-3 px-3 h-[100%] rounded-md
-          hover:border-cyan-900 w-[100%] bg-black/10 border-2 border-gray-600"
+          montserrat-subtitle outline-none py-3 px-3 h-[100%] rounded-md w-[100%] bg-black/10 border-2 border-gray-600"
             value={amount}
             type="text"
             placeholder={`0.1  ${byDefault}`}
@@ -500,7 +499,7 @@ const Transfer = () => {
             <ul className="" onClick={() => setshow(!show)}>
               <li
                 className="flex p-2 px-3 cursor-pointer rounded-md  font-semibold border-l border-gray-700
-            items-center gap-2 text-cyan-500"
+            items-center gap-2 text-[#FFDE59]"
               >
                 <p>{byDefault}</p>
                 <BsChevronDown size={18} />
@@ -548,7 +547,7 @@ const Transfer = () => {
             transferFunds();
           }}
           className="flex space-x-2 justify-center w-[100%] mx-auto mb-4 my-2 montserrat-subtitle  py-2 montserrat-subtitle  
-          hover:shadow-xl px-6 text-center text-black highlight 
+          hover:shadow-xl px-6 text-center text-black bg-[#FFDE59] 
           rounded-md font-bold  transition-all ease-linear"
         >
           {waiting === false ? (
@@ -564,7 +563,7 @@ const Transfer = () => {
 
       <p
         onClick={viewtrx}
-        className="montserrat-subtitle flex mx-auto items-center animate-pulse-2s montserrat-small  text-highlight  text-center font-semibold underline underline-offset-8 decoration-bgGray cursor-pointer"
+        className="montserrat-subtitle flex mx-auto items-center animate-pulse-2s montserrat-small  text-[#FFDE59]  text-center font-semibold underline underline-offset-8 decoration-bgGray cursor-pointer"
       >
         {trxid ==='' ? '' : '   Successfully Sent ! Click to view'}
     

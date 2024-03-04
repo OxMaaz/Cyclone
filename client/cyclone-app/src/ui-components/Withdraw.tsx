@@ -186,7 +186,7 @@ const Withdraw = ({
               <ToolTip tooltip="Get funds in the Connected wallet !">
                 <TbSwitchVertical
                   onClick={toggle}
-                  className="text-[1.8rem] text-highlight cursor-pointer"
+                  className="text-[1.8rem] text-[#FFDE59] cursor-pointer"
                 />
               </ToolTip>
             </div>
@@ -202,7 +202,7 @@ const Withdraw = ({
                   />
                 ) : (
                   <MdOutlineDone
-                    className="cursor-pointer  text-highlight"
+                    className="cursor-pointer  text-[#FFDE59]"
                     size={28}
                   />
                 )}
@@ -220,7 +220,7 @@ const Withdraw = ({
         <button
           onClick={sendTransaction}
           className="flex space-x-2 justify-center w-[100%] mx-auto mb-4 my-2 montserrat-subtitle py-2 
-          hover:shadow-xl px-6 text-center text-black highlight j
+          hover:shadow-xl px-6 text-center text-black bg-[#FFDE59] j
           rounded-md font-bold  transition-all ease-linear"
         >
           <TbTransferIn className="text-[1.3rem] text-inherit" />
@@ -228,7 +228,7 @@ const Withdraw = ({
         </button>
       </div>
 
-      <p className={`text-[.9rem] font-bold montserrat-small ${error === 'Successfully sent!' ? 'montserrat-subtitle flex mx-auto items-center animate-pulse-2s montserrat-small  text-highlight  text-center font-semibold underline underline-offset-8 decoration-bgGray cursor-pointer ' : 'text-red-500'}`}>
+      <p className={`text-[.9rem] font-bold montserrat-small ${error === 'Successfully sent!' ? 'montserrat-subtitle flex mx-auto items-center animate-pulse-2s montserrat-small  text-[#FFDE59]  text-center font-semibold underline underline-offset-8 decoration-bgGray cursor-pointer ' : 'text-red-500'}`}>
         {error}
       </p>
 

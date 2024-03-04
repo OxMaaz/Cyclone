@@ -11,12 +11,12 @@ const Footer = () => {
           </a>
         </li>
         <li className="text-[#131619] hover:text-gray-700">
-          <a href="https://github.com/TheForus">
+          <a href="https://github.com/TheCyclone">
             <FaGithub size={24} />
           </a>
         </li>
         <li className="text-[#131619] hover:text-gray-700">
-          <a href="https://twitter.com/The_Forus">
+          <a href="https://twitter.com/The_Cyclone">
             <FaTwitter size={24} />
           </a>
         </li>

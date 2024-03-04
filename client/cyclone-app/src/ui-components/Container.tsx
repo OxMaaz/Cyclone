@@ -1,5 +1,5 @@
 import NavBar from "./NavHeader";
-import Foruskey from "./keys";
+import Cyclonekey from "./keys";
 import Instruction from "./Instruction";
 import Transactions from "./Tx-wrapper";
 import React, { createContext, useState, useEffect, useMemo } from "react";
@@ -8,7 +8,6 @@ import "notyf/notyf.min.css";
 import abi from "../artifacts/contracts/EphemeralKeys.sol/EphemeralKeys.json";
 import { ethers } from "ethers";
 import { chainOptions } from "../helpers/ChainOptions";
-import HeaderRibbon from "../components/HeaderRibbon";
 import { ValidateChainData } from "../checkers/ValidateChainData";
 import { SwitchChain } from "../helpers/SwitchChain"
 import { isDetected } from "../checkers/isDetected";
@@ -191,14 +190,12 @@ const Container = (props: Props) => {
 
   return (
     <AppContext.Provider value={ContextValue}>
-      <div className="overflow-hidden bg-gradient-to-tr from-black via-black/80 to-transparent relative w-full h-full">
+      <div className="overflow-hidden bg-[#000000] relative w-full h-full">
         <div
           className="absolute top-0 right-0 w-full h-full rounded-md bg-gradient-to-tr
          from-blue-400 to-blue-600 z-[-10]"
         ></div>
         <div className="bg-black/80 max-h-max min-h-[100vh] lg:overflow-hidden">
-          <HeaderRibbon />
-
           <NavBar />
 
           <div
@@ -208,7 +205,7 @@ const Container = (props: Props) => {
             <div className="relative m-auto lg:w-[94%] xl:w-[96%] w-[100%] h-full">
               <div className="border border-gray-500 shadow-gray-800 absolute top-0 right-0 w-full h-full rounded-md 
             bg-gradient-to-tr from-blue-400 to-black/20"></div>
-              <Foruskey />
+              <Cyclonekey />
             </div>
             <div
               className="flex lg:flex-row lg:justify-between justify-between 

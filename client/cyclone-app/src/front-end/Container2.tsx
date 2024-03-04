@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 type Props = {};
 
-const Container = (props: Props) => {
+const Container2 = (props: Props) => {
 
     
   return (
@@ -22,4 +22,4 @@ const Container = (props: Props) => {
   );
 };
 
-export default Container;
+export default Container2;

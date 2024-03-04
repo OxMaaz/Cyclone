@@ -127,9 +127,9 @@ export const Receive: React.FC<ChildProps> = ({
 
   const verifySignature = ((sign: any) => {
 
-    if (sign.startsWith('#forus-signatureKey-')) {
+    if (sign.startsWith('#Cyclone-signatureKey-')) {
 
-      setsavedSignaturekey(sign.replace('#forus-signatureKey-', '').slice(0, 64));
+      setsavedSignaturekey(sign.replace('#Cyclone-signatureKey-', '').slice(0, 64));
 
     }
 
@@ -296,7 +296,7 @@ export const Receive: React.FC<ChildProps> = ({
       console.error(e);
     }
 
-    downloadTxt("#walletprivateKey-" + pkey, "Forus-privatekey.txt");
+    downloadTxt("#walletprivateKey-" + pkey, "Cyclone-privatekey.txt");
 
     setmasterkey(pkey);
 
@@ -311,7 +311,7 @@ export const Receive: React.FC<ChildProps> = ({
         <div className="flex justify-end w-full">
           <div className="py-2 flex justify-between space-x-1 items-center w-full">
             {trxList && trxList.length > 0 && (
-              <h1 className="animate-pulse-2s montserrat-small font-semibold  text-highlight  text-[1rem]">
+              <h1 className="animate-pulse-2s montserrat-small font-semibold  text-[#FFDE59]  text-[1rem]">
                 <span>{trxList.length}</span> Transaction Found !{" "}
               </h1>
             )}
@@ -331,7 +331,7 @@ export const Receive: React.FC<ChildProps> = ({
       {transactionTab ? (
         trxList && trxList.length > 0 ? (
           trxList.map((z: any, i: any) => (
-            <div className="pt-4 flex justify-between px-6 text-highlight bg-gray-0">
+            <div className="pt-4 flex justify-between px-6 text-[#FFDE59] bg-gray-0">
               <div className="flex flex-col space-y-2">
                 <h2 className="text-left montserrat-small font-semibold">Address </h2>
                 <p className="text-gray-400">{z.address}</p>
@@ -352,7 +352,7 @@ export const Receive: React.FC<ChildProps> = ({
                 ) : (
                   <MdOutlineDone
                     // onClick={() => copykey(z.key)}
-                    className={`text-green-500 font-bold text-[1.2rem] text-highlight`}
+                    className={`font-bold text-[1.2rem] text-[#FFDE59]`}
                   />
                 )}
               </div>
@@ -411,7 +411,7 @@ export const Receive: React.FC<ChildProps> = ({
             <button
               onClick={fetch}
               className="flex space-x-2 justify-center w-[100%] mx-auto mb-4 my-2 montserrat-subtitle  py-2 
-          hover:shadow-xl px-6 text-center text-black highlight 
+          hover:shadow-xl px-6 text-center text-black bg-[#FFDE59] 
           rounded-md font-bold  transition-all ease-linear"
             >
               <AiOutlineScan className="text-[1.3rem] text-inherit" />

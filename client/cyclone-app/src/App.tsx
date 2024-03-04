@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Wrapper from "./front-page/Wrapper";
-import Forus from "./ui-components/Container";
+import Wrapper from "./front-end/Container2"
+import Cyclone from "./ui-components/Container" 
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Wrapper />} />
-          <Route path="/Forus" element={<Forus />} />
+          <Route path="/Cyclone" element={<Cyclone />} />
         </Routes>
       </Router>
     </div>
