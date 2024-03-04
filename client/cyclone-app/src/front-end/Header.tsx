@@ -34,8 +34,8 @@ const Header = () => {
             text-left text-[1.2rem] md:text-[1.5rem] xl:text-[2.4rem]"
           >
             {/* Receive Eth and tokens with Cyclone confidentially !! */}
-            <span>Anonymous & Secure</span>
-            <span>transactions</span>
+            <span>Stay Anonymous</span>
+            <span> & secure</span>
           </h2>
           <p
             className="montserrat-heading font-semibold pb-1 text-gray-300
@@ -43,7 +43,7 @@ const Header = () => {
           >
             {/* Breaking the link between sender and receiver. Safeguard Your
             Financial Interactions with Cutting-edge Cryptography. */}
-            Get funds privately without sharing wallet address !!
+            Get funds privately with random link
           </p>
           <button
             className="border-1 montserrat-subtitle  

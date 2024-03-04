@@ -57,7 +57,7 @@ const Instruction = (props: Props) => {
               <div className="flex space-x-2">
                 <MdVerifiedUser className="text-[#FFDE59] "size={29} />
                 <p className="flex-1">
-                  Click on the <b>Scan</b> button , paste your <b>Signature key</b> in the designated field
+                  Click on the <b>Scan</b> button , paste your <b>Cyclone keys</b> in the designated field
                 </p>
               </div>
               <div className="flex space-x-2">
