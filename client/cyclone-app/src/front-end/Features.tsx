@@ -16,25 +16,33 @@ const Features = (props: Props) => {
       >
         <FeatureBlock
           heading="Enhanced Privacy Protection"
-          subheading="Privacy is at the core of Cyclone's mission, By utilizing stealth addresses, Cyclone prevents anyone other than the intended recipient from tracing transactions or monitoring financial activities. The secure stealth address acts as a shield, rendering it virtually difficult for unauthorized individuals to gain insights . Cyclone's commitment to enhanced privacy protection sets it apart as a reliable and trustworthy platform for confidential transactions."
+          subheading="Cyclone is deeply committed to prioritizing privacy. Through the use of stealth addresses, Cyclone ensures that only the intended recipient can trace transactions or monitor financial activities. These secure stealth addresses act as a powerful shield, making it extremely challenging for unauthorized individuals to gain any insight.
+
+          ."
         >
           <MdPrivacyTip color="#FFDE59" className="text-[60px]" />
         </FeatureBlock>
         <FeatureBlock
           heading="User-Friendly Interface"
-          subheading="Cyclone sets itself apart by offering a user-friendly interface that prioritizes simplicity and ease of use. Its intuitive design enables both novice and experienced users to navigate the platform effortlessly. The streamlined process of generating unique addresses and initiating transactions ensures a smooth and hassle-free experience. Whether you are new to cryptocurrency or an expert, Cyclone's user-friendly interface guarantees a seamless and efficient transaction process."
+          subheading="Cyclone empowers secure and confidential fund reception through its cutting-edge system. By employing stealth or secret addresses, users can receive amounts without exposing their identities or sensitive financial details. The sender creates a corresponding stealth address upon request using the recipient's unique Cyclone key, ensuring secure and private fund transfers.
+
+          ."
         >
           <MdHandshake color="#FFDE59" className="text-[60px] " />
         </FeatureBlock>
         <FeatureBlock
           heading="Secure Fund Transfer"
-          subheading="Cyclone enables users to receive funds securely and confidentially using its state-of-the-art system. Through the utilization of stealth or secret addresses, the user can receive amount without revealing their identities or sensitive financial details. The sender generates a corresponding stealth address on demand with the help of recipient's unique Cyclone key, ensuring that the funds are sent securely and privately"
+          subheading="Cyclone facilitates secure and confidential fund receptions through its advanced system. By employing stealth addresses, recipients can securely receive amounts without disclosing personal identities or sensitive financial information. The sender generates stealth address upon request using the recipient's unique Cyclone key, guaranteeing secure and private fund transfers.
+
+          "
         >
           <AiOutlineTransaction color="#FFDE59" className="text-[60px]" />
         </FeatureBlock>
         <FeatureBlock
           heading="Unique Address Generation"
-          subheading="Cyclone revolutionizes the way addresses are generated for transactions, ensuring unparalleled privacy and security. With its innovative one-time public key mechanism, each transaction generates a fresh and unique address. This approach eliminates the risks associated with reusing addresses and significantly reduces the chances of transaction tracing or information leaks. By employing this advanced technique, Cyclone provides users with a foolproof method to safeguard their financial information."
+          subheading="Cyclone transforms address generation for transactions, prioritizing unmatched privacy and security. Using its innovative one-time public key mechanism, each transaction yields a new, distinct address. This eliminates risks linked to address reuse and vastly reduces tracing or information leaks. Through this advanced technique, Cyclone offers users a foolproof means to protect their financial information
+
+          ."
         >
           <MdNewReleases color="#FFDE59" className="text-[60px]" />
         </FeatureBlock>

@@ -3,6 +3,7 @@ import Header from "./Header";
 import Features from "./Features";
 import Faq from "./Faq";
 import Footer from "./Footer";
+import Description from "./Description";
 
 
 type Props = {};
@@ -15,6 +16,7 @@ const Container2 = (props: Props) => {
    
       <Navbar />
       <Header />
+      <Description/>
       <Features />
       <Faq />
       <Footer />

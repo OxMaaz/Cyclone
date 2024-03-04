@@ -89,7 +89,7 @@ const Keys = (props: Props) => {
 
   const copycycloneKey = () => {
 
-    navigator.clipboard.writeText(`http://localhost:3000/cyclone?key=${cycloneKey}`);
+    navigator.clipboard.writeText(`https://cyclone.netlify.app/cyclone?key=${cycloneKey}`);
     notyf.success("Copied");
     setAddressCopied(true);
   

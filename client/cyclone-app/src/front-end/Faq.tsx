@@ -83,34 +83,8 @@ transactions by anyone else. This ensures enhanced privacy and
             confidentiality.
           </p>
         )}
-        <h4
-          onClick={() => toggleAnswer(2)}
-          className={`${showAnswers[2]} text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
-        lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-200 gap-16`}
-        >
-          3: What is signature key in Cyclone?
-          <span>
-            {showAnswers[2] ? (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
-              />
-            ) : (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl duration-100"
-              />
-            )}
-          </span>
-        </h4>
-        {showAnswers[2] && (
-          <p className="dark:text-white w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
-            "Signature" is the 32 bytes random key works as a private key of your Cyclone key
-            Its a key to unlock funds on the stealth address generated from your Cyclone key . So when you share your Cyclone key
-            with the sender always save its corresponding signature in a secure place.
-          </p>
-        )}
+       
+      
         <h4
           onClick={() => toggleAnswer(3)}
           className={`${showAnswers[3] && "dark:text-[#09d8a1]"
@@ -140,93 +114,10 @@ transactions by anyone else. This ensures enhanced privacy and
             in a secure location .
           </p>
         )}
-        <h4
-          onClick={() => toggleAnswer(4)}
-          className={`${showAnswers[4]} text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
-        lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-200 gap-16`}
-        >
-          5: How Can I retrieve the private key of that stealth address where the funds have been sent with my
-          Cyclone key?
-          <span>
-            {showAnswers[4] ? (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
-              />
-            ) : (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl duration-100"
-              />
-            )}
-          </span>
-        </h4>
-        {showAnswers[4] && (
-          <p className=" w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
-            You can retrieve the private key of stealth address by clicking on the "scan"
-            button and by pasting your signature key in the destinated input . This will allow
-            you to access the specific stealth address where the funds have been sent.
-          </p>
-        )}
-        <h4
-          onClick={() => toggleAnswer(5)}
-          className={`${showAnswers[5] && "dark:text-[#09d8a1]"
-            } text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
-        lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-200 gap-16`}
-        >
-          6: Is Cyclone suitable for users with varying levels of technical
-          expertise?
-          <span>
-            {showAnswers[5] ? (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
-              />
-            ) : (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl duration-100"
-              />
-            )}
-          </span>
-        </h4>
-        {showAnswers[5] && (
-          <p className="dark:text-white w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
-            Absolutely! Cyclone has been designed with a cheap .quick and user-friendly interface,
-            making it accessible and easy to use for individuals with different
-            levels of technical knowledge. Our app provides a seamless and
-            intuitive experience for all users.
-          </p>
-        )}
+       
+      
 
-        <h4
-          onClick={() => toggleAnswer(6)}
-          className={`${showAnswers[6]} text-left justify-between w-full  hover:text-gray-700
-        lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-200 gap-16`}
-        >
-          7: What if i lost my Signature key ?
-          <span>
-            {showAnswers[6] ? (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
-              />
-            ) : (
-              <IoAddSharp
-                color="#FFDE59"
-                className="lg:text-4xl text-3xl duration-100"
-              />
-            )}
-          </span>
-        </h4>
-        {showAnswers[6] && (
-          <p className=" w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
-            Signature key works like private key of Cyclone key if u lost it you could never retreive the funds sent with the help of your Cyclone key . Well ! its crutial to always save the keys after generating.
-          </p>
-        )}
+      
 
    
         
