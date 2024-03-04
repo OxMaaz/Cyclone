@@ -15,9 +15,9 @@ const Faq = (props: Props) => {
   return (
     <div
       id="faq"
-      className="p-5 py-10 flex flex-col items-center justify-center bg-[#e9e9f3] "
+      className="p-5 py-10 flex flex-col items-center justify-center bg-[#1e1e1f] "
     >
-      <h1 className="montserrat-subheading text-4xl mb-6 text-[#131619]  pb-2 ">
+      <h1 className="montserrat-subheading text-4xl mb-6 text-[#FFDE59]  pb-2 ">
         FAQ
       </h1>
       <div
@@ -28,18 +28,18 @@ const Faq = (props: Props) => {
           onClick={() => toggleAnswer(0)}
           className={`${showAnswers[0]} text-left justify-between w-full  hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           1: How to use Cyclone?
           <span>
             {showAnswers[0] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
@@ -57,19 +57,19 @@ const Faq = (props: Props) => {
           onClick={() => toggleAnswer(1)}
           className={`${showAnswers[1]} text-left justify-between w-full  hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           2: How does Cyclone ensure the privacy and confidentiality of financial
           transactions?
           <span>
             {showAnswers[1] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
@@ -85,27 +85,27 @@ transactions by anyone else. This ensures enhanced privacy and
         )}
         <h4
           onClick={() => toggleAnswer(2)}
-          className={`${showAnswers[2]} text-left justify-between w-full dark:text-gray-300 dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
+          className={`${showAnswers[2]} text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           3: What is signature key in Cyclone?
           <span>
             {showAnswers[2] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
           </span>
         </h4>
         {showAnswers[2] && (
-          <p className="dark:text-gray-300 w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
+          <p className="dark:text-white w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
             "Signature" is the 32 bytes random key works as a private key of your Cyclone key
             Its a key to unlock funds on the stealth address generated from your Cyclone key . So when you share your Cyclone key
             with the sender always save its corresponding signature in a secure place.
@@ -114,20 +114,20 @@ transactions by anyone else. This ensures enhanced privacy and
         <h4
           onClick={() => toggleAnswer(3)}
           className={`${showAnswers[3] && "dark:text-[#09d8a1]"
-            } text-left justify-between w-full dark:text-gray-300 dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
+            } text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           4: How do I generate a unique Cyclone key?
           <span>
             {showAnswers[3] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
@@ -142,21 +142,21 @@ transactions by anyone else. This ensures enhanced privacy and
         )}
         <h4
           onClick={() => toggleAnswer(4)}
-          className={`${showAnswers[4]} text-left justify-between w-full dark:text-gray-300 dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
+          className={`${showAnswers[4]} text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           5: How Can I retrieve the private key of that stealth address where the funds have been sent with my
           Cyclone key?
           <span>
             {showAnswers[4] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
@@ -172,28 +172,28 @@ transactions by anyone else. This ensures enhanced privacy and
         <h4
           onClick={() => toggleAnswer(5)}
           className={`${showAnswers[5] && "dark:text-[#09d8a1]"
-            } text-left justify-between w-full dark:text-gray-300 dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
+            } text-left justify-between w-full dark:text-white dark:hover:text-[white] dark:hover:shadow-lg hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           6: Is Cyclone suitable for users with varying levels of technical
           expertise?
           <span>
             {showAnswers[5] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}
           </span>
         </h4>
         {showAnswers[5] && (
-          <p className="dark:text-gray-300 w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
+          <p className="dark:text-white w-[90%] px-4  pb-5  montserrat-subheading text-[#58707e] text-left">
             Absolutely! Cyclone has been designed with a cheap .quick and user-friendly interface,
             making it accessible and easy to use for individuals with different
             levels of technical knowledge. Our app provides a seamless and
@@ -205,18 +205,18 @@ transactions by anyone else. This ensures enhanced privacy and
           onClick={() => toggleAnswer(6)}
           className={`${showAnswers[6]} text-left justify-between w-full  hover:text-gray-700
         lg:text-lg cursor-pointer flex items-center
-         montserrat-subheading py-4 text-gray-600 gap-16`}
+         montserrat-subheading py-4 text-gray-200 gap-16`}
         >
           7: What if i lost my Signature key ?
           <span>
             {showAnswers[6] ? (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl rotate-45 transition-all duration-100"
               />
             ) : (
               <IoAddSharp
-                color="#131619"
+                color="#FFDE59"
                 className="lg:text-4xl text-3xl duration-100"
               />
             )}

@@ -35,7 +35,7 @@ export const chainOptions: chain[] = [
   
 
     {
-        name: "opBNB Testnet", contract: '0x14710fcD5d3D8a96b1A04ee3A0471ac1017473d2', chainId: "0x15eb", symbol: tBNB, currency: { symbol: "tBNB", decimals: 18 }, rpcs: ['https://opbnb-testnet-rpc.bnbchain.org'], url: "https://testnet.blastscan.io/tx/", tokens: [
+        name: "opBNB Testnet", contract: '0x14710fcD5d3D8a96b1A04ee3A0471ac1017473d2', chainId: "0x15eb", symbol: tBNB, currency: { symbol: "tBNB", decimals: 18 }, rpcs: ['https://opbnb-testnet-rpc.bnbchain.org'], url: "https://testnet.bscscan.com/tx/", tokens: [
 
             { name: "tBNB", address: "", symbol: tBNB },
             { name: "DAI", address: "0x9440c3bb6adb5f0d5b8a460d8a8c010690dac2e8", symbol: dai },

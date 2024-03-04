@@ -155,7 +155,7 @@ const Transfer = () => {
 
 
   //receipent public key (i.e Cyclone key )
-  let rec_fkey: EC.KeyPair | any;
+  let rec_cyckey: EC.KeyPair | any;
 
 
 
@@ -173,7 +173,7 @@ const Transfer = () => {
   const validateCycloneKey = async () => {
 
     /*
-       removing the prefix "fk" of the Cyclone key 
+       removing the prefix "cy" of the Cyclone key 
   */
 
 
@@ -182,7 +182,7 @@ const Transfer = () => {
     
 
 
-      if (CycloneKey.slice(0, 2).toLowerCase() === "fk") {
+      if (CycloneKey.slice(0, 2).toLowerCase() === "cy") {
         const _CycloneKey = CycloneKey.slice(2);
 
         /*
@@ -191,7 +191,7 @@ const Transfer = () => {
         let decode_CycloneKey = base58.decode(_CycloneKey);
 
         const decodedkey = decode_CycloneKey.subarray(0, 33);
-        rec_fkey = ec.keyFromPublic(decodedkey, "hex");
+        rec_cyckey = ec.keyFromPublic(decodedkey, "hex");
 
       } else {
         seterror("Invalid key");
@@ -216,9 +216,9 @@ const Transfer = () => {
       */
 
     try {
-      const calculateSecret = keypair.derive(rec_fkey.getPublic());
+      const calculateSecret = keypair.derive(rec_cyckey.getPublic());
       const hashedSecret = ec.keyFromPrivate(keccak256(calculateSecret.toArray()));
-      const publicKey = rec_fkey?.getPublic()?.add(hashedSecret.getPublic())?.encode("array", false);
+      const publicKey = rec_cyckey?.getPublic()?.add(hashedSecret.getPublic())?.encode("array", false);
 
       //P = H(r*A) * G + B
 
@@ -272,27 +272,27 @@ const Transfer = () => {
     console.log("receipentAddress",sessionStorage.getItem("address"),ContractAddress)
     
 
-    try {
-      const valueToSend = ethers.utils.parseEther(amount);
-      const transactionParameters = {
-        value: valueToSend,
-      };
+    try{
+
+    const transferFundsToStealthAddress = await contract.Transfer(
+      x_cor,
+      y_cor,
+      sharedSecret,
+      receipentAddress,
+      {value : ethers.utils.parseEther(amount)}
+    );
 
 
-      const transfer = await contract.Transfer(
-        x_cor,
-        y_cor,
-        sharedSecret,
-        receipentAddress,
-        transactionParameters
-      );
- 
-  
-      const trx = await transfer;
+    const trx = await transferFundsToStealthAddress;
+
+    await trx.wait
      
       settrxid(txId + trx.hash);   
+
+
+    }
   
-    } catch (e: any) {
+     catch (e: any) {
       console.log(e);
       seterror(e.message);
     }

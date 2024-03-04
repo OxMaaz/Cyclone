@@ -11,7 +11,7 @@ const Container2 = (props: Props) => {
 
     
   return (
-    <div className="bg-[#e9e9f3] ">
+    <div className="bg-[#000000] ">
    
       <Navbar />
       <Header />
