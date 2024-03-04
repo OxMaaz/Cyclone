@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import screenshot from "../assets/ForusKey.png";
+import screenshot from "../assets/Forusey.png";
 import Info from "./Info";
 
 const Header = () => {
